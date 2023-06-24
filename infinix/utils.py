@@ -12,4 +12,3 @@ def load_plug(plug_name):
   spec.loader.exec_module(load)
   sys.modules["infinix.plugins." + plug_name] = load
   print("Infinix loaded" + plug_name)
-  
