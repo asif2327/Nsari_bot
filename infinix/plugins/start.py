@@ -1,9 +1,7 @@
-from .. import bot, openai_key
+from .. import bot
 from telethon import events
 import asyncio
-import openai
 
-openai.my_api_key = openai_key
 
 @bot.on(events.NewMessage(incoming =True, pattern="/start"))
 async def start(event):
@@ -16,7 +14,7 @@ async def start(event):
 async def start(event):
   a= await event.reply("Hello This is Eval Command")
   await asyncio.sleep(3) 
-  await a.edit("this is edited msg")
+  await a.edit("this is edited message")
   
 @bot.on(events.NewMessage(incoming =True, pattern="/get"))
 async def start(event):
